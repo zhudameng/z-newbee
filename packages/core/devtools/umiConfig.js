@@ -43,7 +43,7 @@ function getUmiConfig() {
   };
 }
 
-function resolveNocobasePackagesAlias(config) {
+function resolveZNewbeePackagesAlias(config) {
   const clientSrc = resolve(process.cwd(), './packages/core/client/src');
   const utilsSrc = resolve(process.cwd(), './packages/core/utils/src');
   const sdkSrc = resolve(process.cwd(), './packages/core/sdk/src');
@@ -58,4 +58,4 @@ function resolveNocobasePackagesAlias(config) {
 }
 
 exports.getUmiConfig = getUmiConfig;
-exports.resolveNocobasePackagesAlias = resolveNocobasePackagesAlias;
+exports.resolveZNewbeePackagesAlias = resolveZNewbeePackagesAlias;

@@ -1,4 +1,4 @@
-import { getUmiConfig, resolveNocobasePackagesAlias } from '@znewbee/devtools/umiConfig';
+import { getUmiConfig, resolveZNewbeePackagesAlias } from '@znewbee/devtools/umiConfig';
 import { defineConfig } from 'umi';
 
 const umiConfig = getUmiConfig();
@@ -21,6 +21,6 @@ export default defineConfig({
   routes: [{ path: '/', exact: false, component: '@/pages/index' }],
   // fastRefresh: {},
   chainWebpack(config) {
-    resolveNocobasePackagesAlias(config);
+    resolveZNewbeePackagesAlias(config);
   },
 });

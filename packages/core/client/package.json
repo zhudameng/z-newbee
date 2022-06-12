@@ -52,5 +52,5 @@
     "@types/marked": "^4.0.1",
     "axios-mock-adapter": "^1.20.0"
   },
-  "gitHead": "a00b45a2686695c5f4824d074ac5e1aff210793a"
+  "gitHead": "80723dbb872e4275e048b95eecdef11d27acdcbc"
 }

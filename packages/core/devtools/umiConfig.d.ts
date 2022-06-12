@@ -16,4 +16,4 @@ export declare function getUmiConfig(): {
   };
 };
 
-export declare function resolveNocobasePackagesAlias(config: any): {};
+export declare function resolveZNewbeePackagesAlias(config: any): {};

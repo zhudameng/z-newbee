@@ -26,7 +26,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/znewbee/znewbee.git",
+    "url": "git+https://github.com/zhudameng/z-newbee.git",
     "directory": "packages/presets/znewbee"
   },
   "gitHead": "66d2a4e5fa6e21872a2eda60ae423752c21bf4f8"
