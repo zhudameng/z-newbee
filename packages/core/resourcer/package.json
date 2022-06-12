@@ -1,0 +1,27 @@
+{
+  "name": "@znewbee/resourcer",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "deepmerge": "^4.2.2",
+    "koa-compose": "^4.1.0",
+    "lodash": "^4.17.21",
+    "path-to-regexp": "^6.1.0",
+    "qs": "^6.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewbee/znewbee.git",
+    "directory": "packages/resourcer"
+  },
+  "gitHead": "a00b45a2686695c5f4824d074ac5e1aff210793a"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "create-znewbee-app",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "dependencies": {
+    "@umijs/utils": "^3.5.20",
+    "axios": "^0.26.1",
+    "chalk": "^4.1.1",
+    "commander": "^9.2.0",
+    "tar": "6.1.11"
+  },
+  "bin": {
+    "create-znewbee-app": "./bin/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewbee/znewbee.git",
+    "directory": "packages/core/create-znewbee-app"
+  },
+  "gitHead": "a00b45a2686695c5f4824d074ac5e1aff210793a"
+}

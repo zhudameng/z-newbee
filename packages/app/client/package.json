@@ -1,0 +1,14 @@
+{
+  "name": "@znewbee/app-client",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@znewbee/client": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewbee/znewbee.git",
+    "directory": "packages/app/client"
+  },
+  "gitHead": "a00b45a2686695c5f4824d074ac5e1aff210793a"
+}

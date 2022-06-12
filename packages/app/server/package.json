@@ -1,0 +1,17 @@
+{
+  "name": "@znewbee/app-server",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@znewbee/preset-znewbee": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewbee/znewbee.git",
+    "directory": "packages/app/server"
+  },
+  "gitHead": "a00b45a2686695c5f4824d074ac5e1aff210793a"
+}

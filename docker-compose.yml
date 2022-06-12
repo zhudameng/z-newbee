@@ -1,0 +1,60 @@
+version: "3"
+networks:
+  znewbee:
+    driver: bridge
+services:
+  verdaccio:
+    image: verdaccio/verdaccio
+    networks:
+      - znewbee
+    environment:
+      VERDACCIO_PORT: ${VERDACCIO_PORT}
+    restart: always
+    ports:
+      - "${VERDACCIO_PORT}:${VERDACCIO_PORT}"
+  mysql:
+    image: mysql:8
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+    restart: always
+    ports:
+      - "${DB_MYSQL_PORT}:3306"
+    networks:
+      - znewbee
+  postgres:
+    image: postgres:10
+    restart: always
+    networks:
+      - znewbee
+    command: postgres -c wal_level=logical
+    ports:
+      - "${DB_POSTGRES_PORT}:5432"
+    environment:
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+  adminer:
+    image: znewbee/adminer
+    restart: always
+    networks:
+      - znewbee
+    ports:
+      - ${ADMINER_PORT}:8080
+    volumes:
+      - ./:/var/www/app
+  znewbee:
+    image: node:16-stretch-slim
+    networks:
+      - znewbee
+    command: [ "yarn", "start" ]
+    working_dir: /app
+    env_file: ./.env
+    volumes:
+      - ./:/app
+    expose:
+      - ${APP_PORT}
+    ports:
+      - "${APP_PORT}:${APP_PORT}"

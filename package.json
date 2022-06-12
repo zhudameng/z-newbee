@@ -1,0 +1,46 @@
+{
+  "name": "znewbee",
+  "private": true,
+  "workspaces": [
+    "packages/*/*"
+  ],
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "scripts": {
+    "znewbee": "znewbee",
+    "dev": "znewbee dev",
+    "start": "znewbee start",
+    "build": "znewbee build",
+    "test": "znewbee test",
+    "doc": "znewbee doc",
+    "postinstall": "znewbee postinstall",
+    "lint": "eslint .",
+    "clean": "znewbee clean",
+    "version:alpha": "lerna version prerelease --preid alpha --force-publish=* --no-git-tag-version -m \"chore(versions): publish packages %s\"",
+    "release:force": "lerna publish from-package --yes",
+    "release": "lerna publish"
+  },
+  "resolutions": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0"
+  },
+  "config": {
+    "ghooks": {
+      "commit-msg": "commitlint --edit"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^16.1.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/prompt-cli": "^16.1.0",
+    "ghooks": "^2.0.4",
+    "prettier": "^2.2.1",
+    "pretty-format": "^24.0.0",
+    "pretty-quick": "^3.1.0"
+  }
+}

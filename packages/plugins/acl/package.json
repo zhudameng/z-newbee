@@ -1,0 +1,25 @@
+{
+  "name": "@znewbee/plugin-acl",
+  "version": "0.1.0",
+  "description": "",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "dependencies": {
+    "@znewbee/acl": "0.1.0",
+    "@znewbee/database": "0.1.0",
+    "@znewbee/server": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znewbee/znewbee.git",
+    "directory": "packages/plugins/acl"
+  },
+  "gitHead": "a00b45a2686695c5f4824d074ac5e1aff210793a"
+}
