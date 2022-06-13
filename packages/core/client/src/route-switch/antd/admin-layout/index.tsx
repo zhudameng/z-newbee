@@ -116,7 +116,7 @@ const InternalAdminLayout = (props: any) => {
   const result = useSystemSettings();
   const { service } = useCollectionManager();
   return (
-    <Layout style={{ display: 'flex', height: '100%' }}>
+    <Layout style={{ display: 'flex',maxHeight:'100vh',lineHeight:'100%'}}>
       <Layout.Header
         className={css`
           .ant-menu.ant-menu-dark .ant-menu-item-selected,
@@ -127,7 +127,7 @@ const InternalAdminLayout = (props: any) => {
             background-color: rgba(255, 255, 255, 0.2);
           }
         `}
-        style={{ height: 46, width:'100%',zIndex:999, lineHeight: '46px', position: 'fixed', paddingLeft: 0 ,background:'#44a85d'}}
+        style={{ height: '46px', width:'100%',zIndex:999, lineHeight: '46px', position: 'fixed', paddingLeft: 0 ,background:'#44a85d'}}
       >
         <div style={{ display: 'flex', height: '100%',background:'#44a85d'}}>
           <div style={{ width: 200, display: 'inline-flex', color: '#411777', padding: '0', alignItems: 'center' }}>
@@ -157,16 +157,18 @@ const InternalAdminLayout = (props: any) => {
           <CurrentUser />
         </div>
       </Layout.Header>
-      <Layout style={{display:'flex',flexDirection:'row',marginTop:'46px'}}>
-        <Layout.Sider style={{ display: 'none', background:'rgb(11,32,51)',marginLeft:'24px' }} theme={'light'} ref={sideMenuRef}></Layout.Sider>
+      <Layout style={{display:'flex',flexDirection:'row',marginTop:'46px',height:'100vh',lineHeight:'100vh'}}>
+        <Layout.Sider style={{display:'block', background:'rgb(11,32,51)',maxHeight:'100vh-46px',lineHeight:'100%' ,overflowY:'scroll' }} theme={'light'} ref={sideMenuRef}></Layout.Sider>
         <Layout.Content
           className={css`
-            min-height: calc(100vh - 46px);
-            position: relative;
-            overflow-y: scroll
-            padding-bottom: 70px;
+            max-height: 100vh-46px;
+            line-height:100%;
+            overflow-y: scroll;
+            display:flex;
+            flex-direction:column;
+
             .ant-layout-footer {
-              position: absolute;
+              position: fixed;
               bottom: 0;
               text-align: center;
               width: 100%;
