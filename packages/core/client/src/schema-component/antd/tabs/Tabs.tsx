@@ -39,8 +39,8 @@ const designerCss = css`
     }
   }
   &.nb-action-link {
-    color:#32CD32;
-    font:16px bold;
+    color:#009999;
+    font:14px bold;
     > .general-schema-designer {
       top: -10px;
       bottom: -10px;

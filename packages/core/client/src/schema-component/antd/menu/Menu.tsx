@@ -230,7 +230,6 @@ export const Menu: ComposedMenu = observer((props) => {
               .ant-menu-item:hover {
                 color:white;
                 > .ant-menu-title-content > div {
-
                   .general-schema-designer {
                     display: block;
                   }
@@ -297,10 +296,9 @@ export const Menu: ComposedMenu = observer((props) => {
                   }}
                   style={{background:'rgb(11,32,51)'}}
                   //zhudameng
-
                   className={css`
                       .ant-menu-item {
-                        margin:0 0;
+
                         > .ant-menu-title-content {
                           margin-left: -24px;
                           margin-right: -16px;
