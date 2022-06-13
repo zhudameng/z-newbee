@@ -127,7 +127,7 @@ const InternalAdminLayout = (props: any) => {
             background-color: rgba(255, 255, 255, 0.2);
           }
         `}
-        style={{ height: 46, width:'100%',zIndex:'999', lineHeight: '46px', position: 'fixed', paddingLeft: 0 ,background:'#44a85d'}}
+        style={{ height: 46, width:'100%',zIndex:999, lineHeight: '46px', position: 'fixed', paddingLeft: 0 ,background:'#44a85d'}}
       >
         <div style={{ display: 'flex', height: '100%',background:'#44a85d'}}>
           <div style={{ width: 200, display: 'inline-flex', color: '#411777', padding: '0', alignItems: 'center' }}>
@@ -150,7 +150,7 @@ const InternalAdminLayout = (props: any) => {
             <MenuEditor sideMenuRef={sideMenuRef}/>
           </div>
         </div>
-        <div style={{ position: 'absolute', top: 0, right: 0 ,zIndex:'1',height:'46px',background:'#44a85d'}}>
+        <div style={{ position: 'absolute', top: 0, right: 0 ,zIndex:1,height:'46px',background:'#44a85d'}}>
           <ACLAllowConfigure>
             <RemotePluginManagerToolbar />
           </ACLAllowConfigure>
@@ -158,7 +158,7 @@ const InternalAdminLayout = (props: any) => {
         </div>
       </Layout.Header>
       <Layout style={{display:'flex',flexDirection:'row',marginTop:'46px'}}>
-        <Layout.Sider style={{ display: 'none', background:'rgb(11,32,51)' }} theme={'light'} ref={sideMenuRef}></Layout.Sider>
+        <Layout.Sider style={{ display: 'none', background:'rgb(11,32,51)',marginLeft:'24px' }} theme={'light'} ref={sideMenuRef}></Layout.Sider>
         <Layout.Content
           className={css`
             min-height: calc(100vh - 46px);

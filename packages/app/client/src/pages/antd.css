@@ -24011,7 +24011,7 @@ textarea.ant-mentions {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgb(127, 166, 157);
   font-variant: tabular-nums;
   line-height: 1.5715;
   list-style: none;
@@ -24067,10 +24067,10 @@ textarea.ant-mentions {
 }
 .ant-table-thead > tr > th {
   position: relative;
-  color: rgba(0, 0, 0, 0.85);
+  color: rgb(17, 68, 29);
   font-weight: 500;
   text-align: left;
-  background: #fafafa;
+  background: rgba(68, 168, 93, 0.1);
   border-bottom: 1px solid #f0f0f0;
   transition: background 0.3s ease;
 }
