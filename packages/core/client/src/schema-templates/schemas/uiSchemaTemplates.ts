@@ -72,8 +72,11 @@ export const uiSchemaTemplatesSchema: ISchema = {
           properties: {
             actions: {
               type: 'void',
-              title: '{{ t("Actions") }}',
+              title: '操作',
               'x-component': 'TableV2.Column',
+              'x-component-props': {
+
+              },
               properties: {
                 actions: {
                   type: 'void',

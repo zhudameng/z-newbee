@@ -26,7 +26,7 @@ export const actionDesignerCss = css`
     }
   }
   &.nb-action-link {
-    color: #31b989;
+    color: #33ccff;
     > .general-schema-designer {
       top: -10px;
       bottom: -10px;

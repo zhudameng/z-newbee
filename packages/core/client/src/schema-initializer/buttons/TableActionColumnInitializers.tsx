@@ -46,6 +46,11 @@ export const TableActionColumnInitializers = (props: any) => {
                 'x-component': 'Action.Link',
                 'x-action': 'view',
                 'x-decorator': 'ACLActionProvider',
+                'x-component-props':{
+                  style:{
+
+                  }
+                }
               },
             },
             {

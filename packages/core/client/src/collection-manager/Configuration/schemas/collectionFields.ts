@@ -164,8 +164,11 @@ export const collectionFieldSchema: ISchema = {
         },
         column4: {
           type: 'void',
-          title: '{{ t("Actions") }}',
+          title: '操作',
           'x-component': 'Table.Column',
+          'x-component-props': {
+            split: '|',
+          },
           properties: {
             actions: {
               type: 'void',

@@ -42,6 +42,78 @@ export const TableActionInitializers = {
             },
           },
         },
+        {
+          type: 'item',
+          title: "导出",
+          component: 'ExportActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
+        {
+          type: 'item',
+          title: "导入快递信息",
+          component: 'ImportExpressActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
+        {
+          type: 'item',
+          title: "导入订单",
+          component: 'ImportOrderActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
+        {
+          type: 'item',
+          title: "通知发货",
+          component: 'NoticeSendActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
+        {
+          type: 'item',
+          title: "批量发货",
+          component: 'BatchSendActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
+        {
+          type: 'item',
+          title: "批量发布",
+          component: 'BatchPublishActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
       ],
     },
   ],

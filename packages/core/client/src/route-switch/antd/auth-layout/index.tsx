@@ -9,8 +9,9 @@ export function AuthLayout(props: any) {
     <div
       style={{
         position:'absolute',
-        backgroundSize:'cover',
+        backgroundSize: 'cover',
         backgroundImage:`url('http://zhudameng.natapp1.cc/storage/uploads/login-bg.png')`,
+        backgroundRepeat: 'no-repeat',
         width:'100%',
         height: '100%',
       }}

@@ -507,6 +507,120 @@ export const BulkDestroyActionInitializer = (props) => {
   return <ActionInitializer {...props} schema={schema} />;
 };
 
+export const ExportActionInitializer = (props) => {
+  const schema = {
+    title: '导出',
+    'x-action': 'export',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'PlusOutlined',
+      type: 'primary',
+      confirm: {
+        title: "{{t('Delete record')}}",
+        content: "{{t('Are you sure you want to delete it?')}}",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
+export const ImportExpressActionInitializer = (props) => {
+  const schema = {
+    title: '导入快递信息',
+    'x-action': 'importExpress',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'ImportOutlined',
+      type: 'primary',
+      confirm: {
+        title: "导入快递信息",
+        content: "请按导入模板导入快递信息",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
+export const ImportOrderActionInitializer = (props) => {
+  const schema = {
+    title: '导入订单',
+    'x-action': 'importOrder',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'ImportOutlined',
+      type: 'primary',
+      confirm: {
+        title: "导入订单",
+        content: "请按订单导入模板导入订单",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
+export const NoticeSendActionInitializer = (props) => {
+  const schema = {
+    title: '通知发货',
+    'x-action': 'noticeSend',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'SendOutlined',
+      type: 'primary',
+      confirm: {
+        title: "通知发货",
+        content: "请选择要发货的订单",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
+export const BatchSendActionInitializer = (props) => {
+  const schema = {
+    title: '批量发货',
+    'x-action': 'batchSend',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'SendOutlined',
+      type: 'primary',
+      confirm: {
+        title: "批量发货",
+        content: "请先导入快递信息",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
+export const BatchPublishActionInitializer = (props) => {
+  const schema = {
+    title: '批量发布',
+    'x-action': 'batchPublish',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'AuditOutlined',
+      type: 'primary',
+      confirm: {
+        title: "确认发布",
+        content: "您确定要批量发布吗？",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
 export const SubmitActionInitializer = (props) => {
   const schema = {
     title: '{{ t("Submit") }}',
@@ -720,18 +834,22 @@ export const RecordAssociationBlockInitializer = (props) => {
 export const TableActionColumnInitializer = (props) => {
   const schema = {
     type: 'void',
-    title: '{{ t("Actions") }}',
+    title: '操作',
     'x-decorator': 'TableV2.Column.ActionBar',
     'x-component': 'TableV2.Column',
     'x-designer': 'TableV2.ActionColumnDesigner',
     'x-initializer': 'TableActionColumnInitializers',
     'x-action-column': 'actions',
+    'x-component-props': {
+      split: '|',
+    },
     properties: {
       actions: {
         type: 'void',
         'x-decorator': 'DndContext',
         'x-component': 'Space',
         'x-component-props': {
+          fiexd:'right',
           split: '|',
         },
         properties: {},

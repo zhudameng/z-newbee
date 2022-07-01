@@ -37,10 +37,11 @@ import {
 } from '@znewbee/client';
 import { notification } from 'antd';
 import '@/pages/antd.css';
-import React from 'react';
+import React,{useEffect} from 'react';
 import { I18nextProvider } from 'react-i18next';
 import { Link, NavLink } from 'react-router-dom';
 import apiClient from './apiClient';
+import { TpWatermark } from './tools';
 
 apiClient.axios.interceptors.response.use(
   (response) => response,
@@ -115,6 +116,9 @@ const providers = [
 
 const App = compose(...providers)(() => {
   const routes = useRoutes();
+  useEffect(() => {
+    TpWatermark("云果数字供应链");
+  },["hello"])
   return (
     <div>
       <RouteSwitch routes={routes} />

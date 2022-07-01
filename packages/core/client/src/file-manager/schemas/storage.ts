@@ -244,8 +244,11 @@ export const storageSchema: ISchema = {
             },
             column4: {
               type: 'void',
-              title: '{{t("Actions")}}',
+              title: '我晕',
               'x-component': 'Table.Column',
+              'x-component-props': {
+                split: '|',
+              },
               properties: {
                 actions: {
                   type: 'void',

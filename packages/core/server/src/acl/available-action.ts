@@ -35,6 +35,30 @@ const availableActions: {
     displayName: '{{t("Delete")}}',
     type: 'old-data',
   },
+  importOrder: {
+    displayName: '导入订单',
+    type: 'old-data',
+  },
+  importExpress: {
+    displayName: '导入快递信息',
+    type: 'old-data',
+  },
+  batchSend: {
+    displayName: '批量发货',
+    type: 'old-data',
+  },
+  noticeSend: {
+    displayName: '通知发货',
+    type: 'old-data',
+  },
+  export: {
+    displayName: '导出',
+    type: 'old-data',
+  },
+  batchPublish: {
+    displayName: '批量发布',
+    type: 'old-data',
+  },
 };
 
 export { availableActions };

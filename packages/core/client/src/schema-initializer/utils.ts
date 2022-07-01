@@ -571,12 +571,15 @@ export const createTableBlockSchema = (options) => {
         properties: {
           actions: {
             type: 'void',
-            title: '{{ t("Actions") }}',
+            title: '操作',
             'x-action-column': 'actions',
             'x-decorator': 'TableV2.Column.ActionBar',
             'x-component': 'TableV2.Column',
             'x-designer': 'TableV2.ActionColumnDesigner',
             'x-initializer': 'TableActionColumnInitializers',
+            'x-component-props': {
+              split: '|',
+            },
             properties: {
               actions: {
                 type: 'void',

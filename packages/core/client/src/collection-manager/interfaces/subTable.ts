@@ -161,13 +161,17 @@ export const subTable: IField = {
             },
             column4: {
               type: 'void',
-              title: '{{ t("Actions") }}',
+              title: '操作',
               'x-component': 'Table.Column',
+              'x-component-props': {
+                split: '|',
+              },
               properties: {
                 actions: {
                   type: 'void',
                   'x-component': 'Space',
                   'x-component-props': {
+                    fiexd:'right',
                     split: '|',
                   },
                   properties: {

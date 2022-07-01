@@ -205,15 +205,19 @@ export const scopesSchema: ISchema = {
                     },
                     actions: {
                       type: 'void',
-                      title: '{{ t("Actions") }}',
+                      title: '操作',
                       'x-action-column': 'actions',
                       'x-component': 'TableV2.Column',
+                      'x-component-props': {
+                        split: '|',
+                      },
                       properties: {
                         actions: {
                           type: 'void',
                           'x-decorator': 'DndContext',
                           'x-component': 'Space',
                           'x-component-props': {
+                            fiexd:'right',
                             split: '|',
                           },
                           properties: {

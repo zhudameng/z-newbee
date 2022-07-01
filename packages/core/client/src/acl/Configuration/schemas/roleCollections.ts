@@ -127,8 +127,11 @@ export const roleCollectionsSchema: ISchema = {
         },
         column4: {
           type: 'void',
-          title: '{{t("Actions")}}',
+          title: '操作',
           'x-component': 'Table.Column',
+          'x-component-props': {
+
+          },
           properties: {
             actions: {
               type: 'void',

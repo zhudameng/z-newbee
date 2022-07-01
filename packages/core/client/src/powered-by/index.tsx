@@ -12,17 +12,19 @@ export const PoweredBy = () => {
     <div
       className={css`
         text-align: center;
-        color: rgba(0, 0, 0, 0.45);
+        padding-right: 160px;
+        font-size: 15px;
+        color: rgba(0, 22,20, 0.45);
         a {
-          color: rgba(0, 0, 0, 0.45);
+          color: rgba(0, 22, 20, 0.45);
           &:hover {
-            color: rgba(0, 0, 0, 0.85);
+            color: rgba(0, 22, 20, 0.85);
           }
         }
       `}
     >
       {/*Powered by <a href={urls[i18n.language] || urls['en-US']}>znewbee</a>*/}
-      由云果产业大脑提供技术支持。
+      由&nbsp;<a href={'https://www.gaoyuanyunguo.com/'}><u>云果产业大脑</u></a>&nbsp;提供技术支持.
     </div>
   );
 };

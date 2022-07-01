@@ -312,6 +312,10 @@ export const useBulkDestroyActionProps = () => {
   };
 };
 
+export const useCommonActionProps = () =>{
+  return;
+}
+
 export const useDetailsPaginationProps = () => {
   const ctx = useDetailsBlockContext();
   const count = ctx.service?.data?.meta?.count || 0;

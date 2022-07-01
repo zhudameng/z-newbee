@@ -26,7 +26,7 @@ const useTableColumns = () => {
       }
     }, [])
     .map((s: Schema) => {
-      return {
+      let  obj = {
         title: <RecursionField name={s.name} schema={s} onlyRenderSelf />,
         dataIndex: s.name,
         key: s.name,
@@ -42,7 +42,12 @@ const useTableColumns = () => {
             </RecordIndexProvider>
           );
         },
-      } as TableColumnProps<any>;
+      } as TableColumnProps<any>
+      if (obj.dataIndex.toString()==='actions'){
+        obj.fixed = "right"
+      }
+
+      return obj;
     });
   if (!exists) {
     return columns;
@@ -70,7 +75,7 @@ export const components = {
           className={cls(
             props.className,
             css`
-              max-width: 300px;
+              max-width: 200px;
               white-space: nowrap;
               &:hover .general-schema-designer {
                 display: block;
@@ -98,10 +103,10 @@ export const components = {
         className={classNames(
           props.className,
           css`
-            max-width: 300px;
+            max-width: 200px;
             white-space: nowrap;
             .nb-read-pretty-input-number {
-              text-align: right;
+              text-align: left;
             }
           `,
         )}
