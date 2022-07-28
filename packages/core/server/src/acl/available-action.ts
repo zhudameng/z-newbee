@@ -59,6 +59,10 @@ const availableActions: {
     displayName: '批量发布',
     type: 'old-data',
   },
+  purchaseStorageIn:{
+    displayName:'采购入库',
+    type: 'old-data',
+  }
 };
 
 export { availableActions };

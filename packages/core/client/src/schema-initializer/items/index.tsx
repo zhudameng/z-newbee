@@ -621,6 +621,25 @@ export const BatchPublishActionInitializer = (props) => {
   return <ActionInitializer {...props} schema={schema} />;
 };
 
+export const purchaseStorageInActionInitializer = (props) => {
+  const schema = {
+    title: '采购入库',
+    'x-action': 'purchaseStorageIn',
+    'x-component': 'Action',
+    'x-designer': 'Action.Designer',
+    'x-component-props': {
+      icon: 'AuditOutlined',
+      type: 'primary',
+      confirm: {
+        title: "选择采购任务",
+        content: "按采购任务进行采购入库，1、先选择采购任务；2、与采购模块的验收入库功能一致。",
+      },
+      useProps: '{{ useCommonActionProps }}',
+    },
+  };
+  return <ActionInitializer {...props} schema={schema} />;
+};
+
 export const SubmitActionInitializer = (props) => {
   const schema = {
     title: '{{ t("Submit") }}',

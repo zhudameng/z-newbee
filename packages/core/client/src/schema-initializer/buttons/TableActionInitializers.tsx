@@ -114,6 +114,18 @@ export const TableActionInitializers = {
             },
           },
         },
+        {
+          type: 'item',
+          title: "采购入库",
+          component: 'purchaseStorageInActionInitializer',
+          schema: {
+            'x-align': 'right',
+            'x-decorator': 'ACLActionProvider',
+            'x-acl-action-props': {
+              skipScopeCheck: true,
+            },
+          },
+        },
       ],
     },
   ],
